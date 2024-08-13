@@ -18,9 +18,9 @@ def process(em, qm, cm):
         df['Solution 1 Norm'] = df['Solution 1']/df['Total Marks']
         df['Solution 2 Norm'] = df['Solution 2']/df['Total Marks']
         df['Solution 3 Norm'] = df['Solution 3']/df['Total Marks']
-        df['Solution 1 Norm Std'] = df[sol_1_cols].std(axis = 1)/df['Total Marks']
-        df['Solution 2 Norm Std'] = df[sol_2_cols].std(axis = 1)/df['Total Marks']
-        df['Solution 3 Norm Std'] = df[sol_3_cols].std(axis = 1)/df['Total Marks']
+        df['Solution 1 Norm Std'] = df[sol_1_cols].sem(axis = 1)/df['Total Marks']
+        df['Solution 2 Norm Std'] = df[sol_2_cols].sem(axis = 1)/df['Total Marks']
+        df['Solution 3 Norm Std'] = df[sol_3_cols].sem(axis = 1)/df['Total Marks']
         df.drop(df.columns[[2, 3, 4, 5, 6, 7]], axis=1, inplace=True)   
     sol_1_cols = []
     sol_2_cols = []
@@ -80,9 +80,9 @@ def que_process(NMS_EM, NMS_CM, NMS_QM, MS_EM, MS_CM, MS_QM):
         df['Solution 1 Norm'] = df['Solution 1']/df['Total Marks']
         df['Solution 2 Norm'] = df['Solution 2']/df['Total Marks']
         df['Solution 3 Norm'] = df['Solution 3']/df['Total Marks']
-        df['Solution 1 Norm Std'] = df[sol_1_cols].std(axis = 1)/df['Total Marks']
-        df['Solution 2 Norm Std'] = df[sol_2_cols].std(axis = 1)/df['Total Marks']
-        df['Solution 3 Norm Std'] = df[sol_3_cols].std(axis = 1)/df['Total Marks']
+        df['Solution 1 Norm Std'] = df[sol_1_cols].sem(axis = 1)/df['Total Marks']
+        df['Solution 2 Norm Std'] = df[sol_2_cols].sem(axis = 1)/df['Total Marks']
+        df['Solution 3 Norm Std'] = df[sol_3_cols].sem(axis = 1)/df['Total Marks']
         df.drop(df.columns[[2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14,
         15, 16]], axis=1, inplace=True)
     sol_1_cols = []
